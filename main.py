@@ -11,7 +11,7 @@ from langchain_community.embeddings import HuggingFaceEmbeddings
 
 GROQ_API_KEY = "Your API Key" 
 
-st.header("NoteBot")
+st.header("PDF Analyser")
 
 with st.sidebar: 
     st.title("My Notes") 
@@ -61,4 +61,5 @@ if file is not None:
         output = chain.invoke({"input": user_query, "context": matching_chunks})
 
         st.write(output)
+
 
