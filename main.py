@@ -1,5 +1,4 @@
-import streamlit as st 
-import os 
+import streamlit as st
 
 from PyPDF2 import PdfReader 
 
@@ -62,3 +61,4 @@ if file is not None:
         output = chain.invoke({"input": user_query, "context": matching_chunks})
 
         st.write(output)
+
