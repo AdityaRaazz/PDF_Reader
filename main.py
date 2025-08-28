@@ -10,7 +10,7 @@ from langchain.prompts import ChatPromptTemplate
 from langchain_groq import ChatGroq
 from langchain_community.embeddings import HuggingFaceEmbeddings
 
-GROQ_API_KEY = "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" 
+GROQ_API_KEY = "Your API Key" 
 
 st.header("NoteBot")
 
@@ -60,4 +60,5 @@ if file is not None:
 
         chain = create_stuff_documents_chain(llm, customized_prompt) 
         output = chain.invoke({"input": user_query, "context": matching_chunks})
+
         st.write(output)
